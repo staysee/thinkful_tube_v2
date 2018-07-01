@@ -17,20 +17,20 @@
   </header>
 
   <main role="main">
-    <form action="#" class="search-form js-search-form">
+    <form action="#" class="search-form js-search-form" role="search">
       <label>
-        <input class="js-query" type="search" name="search" required>
+        <input class="js-query" type="search" aria-label="Search" required>
       </label>
       <button role="button" type="submit">Search</button>
     </form>
 
-    <div class="total-results js-total-results"></div>
-    <div class="results js-results"></div>
+    <section class="total-results js-total-results" aria-live="assertive" hidden></section>
+    <section class="results js-results" aria-live="assertive" hidden></section>
 
-    <div class="pagination">
-      <button role="button" type="button" id="prevPage" class="hidden">Previous</button>
-      <button role="button" type="button" id="nextPage" class="hidden">Next</button>
-    </div>
+    <section class="pagination">
+      <button role="button" type="button" id="prevPage" class="hidden" aria-live="polite">Previous</button>
+      <button role="button" type="button" id="nextPage" class="hidden" aria-live="polite">Next</button>
+    </section>
   </main>
 
 
