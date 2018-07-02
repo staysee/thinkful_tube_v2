@@ -47,10 +47,10 @@ function renderResult(result){
 
 return `
     <div class="search-item">
-        <a class="video lightbox" href="https://youtube.com/watch?v=${videoID}" data-videoid=${videoID} onclick="createlightbox(); console.log(\'lightbox\'); return false"><img src="${result.snippet.thumbnails.medium.url}" alt="thumbnail of search result"></a>
+        <a class="video lightbox" href="https://youtube.com/watch?v=${videoID}" data-videoid=${videoID} onclick="createlightbox(); console.log(\'lightbox\'); return false" aria-label="Link to watch video of search result"><img src="${result.snippet.thumbnails.medium.url}" alt="thumbnail of search result"></a>
         <div class="video-title">${result.snippet.title}</div>
         <div class="video-description">${result.snippet.description}</div>
-        <div class="channel-title">View more by <a href="https://youtube.com/channel/${channelID}" target="_blank">${result.snippet.channelTitle}</a></div>
+        <div class="channel-title">View more by <a href="https://youtube.com/channel/${channelID}" target="_blank">${result.snippet.channelTitle} aria-label="Watch more videos from this channel"</a></div>
     </div>
   `
 }
